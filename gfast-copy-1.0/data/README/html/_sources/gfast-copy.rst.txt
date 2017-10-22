@@ -1,0 +1,166 @@
+.. Copyright (c) Brüggemann Eddie.
+.. Permission is granted to copy, distribute and/or modify this document
+.. under the terms of the GNU Free Documentation License, Version 1.3
+.. or any later version published by the Free Software Foundation;
+.. with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+.. A copy of the license is included in the section entitled "GNU
+.. Free Documentation License".
+
+.. sectionauthor:: Brüggemann Eddie <mrcyberfighter@gmail.com>
+
+.. codeauthor:: Brüggemann Eddie <mrcyberfighter@gmail.com>
+
+==========
+gfast-copy
+==========
+
+:program: :program:`gfast-copy` (a graphical fast chunk file copy program.)
+
+:author: Eddie Brüggemann <mrcyberfighter@gmail.com>
+
+:language: **C**
+
+:version: |version|
+
+:release: |today|
+
+------------
+Introduction
+------------
+
+:program:`gfast-copy` stands for **Graphical** **Fast** **Copy** and it is build on a :ref:`very fast copying algorithm <fast-copy-algorithm>`.
+
+.. note:: This tool is implemented into the UNIX spirit:
+
+  A single program which can do an unique task but do it well.
+
+  It copy a single file to a destination in a practice way.
+
+  As fast as it can !!!
+
+:program:`gfast-copy` only provides a graphical interface for the :program:`fast-copy` command-line tool,
+
+that I have implement. Which can copy a file like a film (Around ``700`` **Mo**) in few seconds.
+
+.. note:: I have implement it because I often copy videos from a location to another:
+
+ Per example from the folder named ``ToWatch`` to the folder ``Seen``.
+
+ Or \*.iso images from the folder ``Download`` to the folder ``ISO_Collection``.
+
+ Because the :abbr:`O.S (Operating System)` can be slow by chunk copy operations.
+
+------------------------------------
+Graphical User Interface description
+------------------------------------
+
+~~~~~~~~~
+Interface
+~~~~~~~~~
+
+You get to verticaly align buttons:
+
+1. ``Source``
+
+2. ``Destination``
+
+Use the ``Source`` labeled button to set *the file to copy* :guilabel:`&Source` (:kbd:`Ctrl + S`).
+
+  This will display the *basename* of the file to copy *onto the button*.
+
+Use the ``Destination`` labeled button to set *the file destination* :guilabel:`&Destination` (:kbd:`Ctrl + D`).
+
+  This will display the basename you have choose for the destination file.
+
+And at they are 2 icons buttons:
+
++ :guilabel:`&Remove` source file toggle button (:kbd:`Ctrl + R`).
+
++ Run copying (:kbd:`Ctrl + Return`).
+
+:note: Take a look at my self-builded GtkSmartIconButton widgets.
+
+Once the copying done, the button contains their original string and icons.
+
+~~~~~~~~
+Menu bar
+~~~~~~~~
+
+You get a menu bar too with few menu buttons.
+
+1. Files
+
+  + :guilabel:`Files --> Set &source file` (:kbd:`Ctrl + S`).
+
+  + :guilabel:`Files --> Set &destination file` (:kbd:`Ctrl + D`).
+
+  + :guilabel:`Files --> Run copying` (:kbd:`Ctrl + Return`).
+
+  + :guilabel:`&Quit` (:kbd:`Ctrl + Q`).
+
+2. Configuration
+
+  + :guilabel:`Configuration --> Light theme`.
+
+  + :guilabel:`Configuration --> Dark theme`.
+
+  these are radiobuttons to choose your theming.
+
+  + :guilabel:`Configuration --> Delete source file` (:kbd:`Ctrl + R`).
+
+3. Info ?
+
+  + :guilabel:`Info ? --> Read me` (:kbd:`Ctrl + N`). 
+
+  + :guilabel:`Info ? --> &About` (:kbd:`Ctrl + A`).
+
+
+----
+NOTE
+----
+
+I have implement this tool for my personal requirement: good by Hollywood !
+
+So if you think your system is too slow by copying chunk (big) files use (g)fast-copy !
+
+-------
+Credits
+-------
+
+Thanks to my beloved mother, my family and the doctors.
+
+Stay away from drugs drugs destroy your brain and your life.
+
+~~~~~~~~~~~~~~~~~~~
+Windows \*.exe file
+~~~~~~~~~~~~~~~~~~~
+
+Thanks to the gnome-bugzilla team which help to provide you a version of (g)fast-copy.
+
+Without their help only the MSYS2 and Cygwin users would be able to launch (g)fast-copy.
+
+
+-------
+License
+-------
+
+.. code-block:: text
+
+  gfast-copy an easy to use graphical fast copy tool for big files.          
+
+  Copyright (C) 2017 Brüggemann Eddie.                                       
+                                                                              
+  This file is part of gfast-copy.                                           
+  gfast-copy is free software: you can redistribute it and/or modify         
+  it under the terms of the GNU General Public License as published by       
+  the Free Software Foundation, either version 3 of the License, or          
+  (at your option) any later version.                                        
+                                                                             
+  gfast-copy is distributed in the hope that it will be useful,              
+  but WITHOUT ANY WARRANTY; without even the implied warranty of             
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the               
+  GNU General Public License for more details.                               
+                                                                             
+  You should have received a copy of the GNU General Public License          
+  along with gfast-copy. If not, see <http://www.gnu.org/licenses/>
+

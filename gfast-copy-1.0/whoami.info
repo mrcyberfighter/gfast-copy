@@ -1,0 +1,67 @@
+log name: edward
+
+---
+
+Localisation:
+
+LANG=fr_FR.UTF-8
+LANGUAGE=fr_FR
+LC_CTYPE="fr_FR.UTF-8"
+LC_NUMERIC="fr_FR.UTF-8"
+LC_TIME="fr_FR.UTF-8"
+LC_COLLATE="fr_FR.UTF-8"
+LC_MONETARY="fr_FR.UTF-8"
+LC_MESSAGES="fr_FR.UTF-8"
+LC_PAPER="fr_FR.UTF-8"
+LC_NAME="fr_FR.UTF-8"
+LC_ADDRESS="fr_FR.UTF-8"
+LC_TELEPHONE="fr_FR.UTF-8"
+LC_MEASUREMENT="fr_FR.UTF-8"
+LC_IDENTIFICATION="fr_FR.UTF-8"
+LC_ALL=
+
+---
+
+finger like :
+
+Identifiant : edward                      Nom réel :  edward
+Répertoire : /home/edward                 Interpréteur :  /bin/bash
+
+
+---
+
+Connected user(s) :
+
+           démarrage système 2017-10-02 20:10
+IDENTIFIANT   tty1         2017-10-02 20:10              1506 id=tty1
+           niveau d'exécution 5 2017-10-02 20:10
+edward   + tty7         2017-10-02 20:11 00:15        1618 (:0)
+
+---
+
+date :
+
+Mon, 02 Oct 2017 20:25:41 +0200
+
+---
+
+uname :
+
+Linux edward-MS-7808 4.10.0-35-generic #39-Ubuntu SMP Wed Sep 13 07:46:59 UTC 2017 x86_64 x86_64 x86_64 GNU/Linux
+
+---
+
+architecture :
+
+x86_64
+
+---
+
+number of processors :
+
+8
+
+---
+
+distribution: Ubuntu 17.04
+

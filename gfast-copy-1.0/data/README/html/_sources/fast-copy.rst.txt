@@ -1,0 +1,221 @@
+.. Copyright (c) Brüggemann Eddie.
+.. Permission is granted to copy, distribute and/or modify this document
+.. under the terms of the GNU Free Documentation License, Version 1.3
+.. or any later version published by the Free Software Foundation;
+.. with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+.. A copy of the license is included in the section entitled "GNU
+.. Free Documentation License".
+
+.. sectionauthor:: Brüggemann Eddie <mrcyberfighter@gmail.com>
+
+.. codeauthor:: Brüggemann Eddie <mrcyberfighter@gmail.com>
+
+.. _fast-copy:
+
+=========
+fast-copy
+=========
+
+:program: :program:`fast-copy` (a fast chunk file copy program).
+
+:author: Eddie Brüggemann <mrcyberfighter@gmail.com>
+
+:language: **C**
+
+:version: |version|
+
+:release: |today|
+
+---------------------------
+fast-copy command-line tool
+---------------------------
+
+:program:`fast-copy` is a **command-line tool** which can work in 2 different fashions:
+
++ Using :abbr:`syscall's (System Calls)`.
+
++ Using a :c:type:`FILE` *streams* pointer.
+
+:note: Per default it make usage of the file streams.
+
+:program:`fast-copy` determine the best buffer size and then process displaying a fancy progress-bar if needed into the terminal.
+
+Fast copy takes at least 2 argument the source and the destination to copy the file on **GNU**/**Linux** and **MacOSX**.
+
+:windows: The command-line tool is available under **Windows** using only the *file streams* and no **progress-bar** feature is provided.
+
+-------
+Options
+-------
+
+.. code-block:: text
+
+  $ fast-copy -h
+  fast-copy - a fast chunk file copy program.
+
+  Usage : fast-copy -r input-file -w output-file [-o] [-e] [-s] [-h]
+
+          -r Read from file (required).
+          -w Write to file  (required).
+          -o Overwrite destination file (optional).
+          -e Erase source file (optional).
+          -s Use syscalls instead of streams (optional only UNIX).
+          -h Print this help message.
+
+  - Copyright (©) 2017 Brüggemann Eddie <mrcyberfighter@gmail.com> GPLv3.
+  $
+
+---
+
+.. option:: -r
+
+  :guilabel:`-r (read from file) --> Input file (required).`
+
+.. option:: -w
+
+  :guilabel:`-w (write to file)  --> Output file (required).`
+
+.. option:: -o
+
+  :guilabel:`-o (overwrite) --> Overwrite destination file (optional).`
+
+.. option:: -e
+
+  :guilabel:`-e (erase) --> Erase source file (optional).`
+
+.. option:: -s
+
+  :guilabel:`-s (syscalls) --> Use syscall instead of streams (optional only UNIX).`
+
+.. option:: -h
+
+  :guilabel:`-h (help) -> Print help message.`
+
+---
+
+The default behavior is to copy *source* to *destination* file using **file stream**, which you can change using the -s switch on UNIX systems.
+
+If the destination file exists :program:`fast-copy` will ask interactively what to do: overwrite or not the file.
+
+The progress bar is only displayed for files greater than : ``sizeof_file > (blocksize * 8 * 16 * 16)``
+
+This value mean to be ``16 Mio`` using **syscalls** or using **file streams** on my system.
+
+:note: The :c:data:`blocksize` is computed to get the best buffer size: the number of bytes by the copying operation an,d is system dependent.
+
+Finally :program:`fast-copy` will synchronize the file system.
+
+---
+
+You can inhibit the interactive overwriting questioning by using th :guilabel:`-o > (overwrite)` switch.
+
+---
+
+You can tell program:`fast-copy` to use syscalls (open, read and write) using the :guilabel:`-s --> (syscall)` switch.
+
+To know that by every **blocksize** copy a :abbr:`syscall (System Call)` will be made by handle by the **kernel**.
+
+Else **file streams** are buffered operations avoiding calling :abbr:`syscall (System Call)` to often.
+
+---
+
+You can tell :program:`fast-copy` to erase the source file once the copy work done using the :guilabel:`-e -> (erase)` switch.
+
+.. _fast-copy-algorithm:
+
+---------------------------
+How does the algorithm work
+---------------------------
+
+1. At first it will check for the best buffer size.
+
+.. note::
+
+  + Using file streams: it will look up the :c:data:`BUFSIZ` constant if it's great enough else the program set it to 8192 octets.
+
+  + Using syscalls it will look up the the :c:member:`st_blocksize` from the :c:func:`stat` function and set it as buffer size.
+
+2. Then it will define a buffer with the optimal size.
+
+3. It will copy the source file to the destination in a loop using the defined buffer.
+
+4. Finally it will synchronize the file-system using :c:func:`fflush` or :c:func:`fsync`.
+
+--------------
+Wrapper script
+--------------
+
+You can build a wrapper script around the :program:`fast-copy` command-line tool,
+
+per example using :program:`zenity`, :program:`xclip` or like, to get the first argument.
+
+And for the second you need a tool which provides a file-chooser.
+
+As like this one, using zenity and nautilus-action:
+
+.. code-block:: bash
+
+  #! /bin/bash
+
+  ###############################################################
+  # Wrapper for fast-copy using zenity and nautilus-actions for #
+  # speed up the file copying.                                  #
+  ###############################################################
+
+  function usage() {
+
+    echo "usage $(basename $0) -r input-file -w output-file [-o] [-s] [-e] [-h]" ;
+
+    exit 1 ;
+  }
+
+  if [[ $# -ne 1 ]] ; then
+
+    # The first argument is given from nautilus-actions.
+
+    usage ;
+
+  fi
+
+  destination=`zenity --file-selection --save --confirm-overwrite --filename="$(basename "${1}")"`
+
+  # Here the source file comes from nautilus action i.e
+  # the contextual gnome-desktop add-on nautilus-actions
+  source_filepath=${1}
+
+  if [[ -n "${destination}" ]] ; then
+
+    fast-copy -r "${source_filepath}" -w "${destination}" -o
+
+    zenity --info --text="Copy completed" --no-wrap --no-markup
+
+  fi
+
+  exit 0
+
+
+---------
+Copyright
+---------
+
+.. code-block:: text
+
+  fast-copy - a fast single chunk file copy program.     
+
+  Copyright (C) 2017 Brüggemann Eddie.                                     
+                                                                            
+  This file is part of fast-copy.                                         
+  fast-copy is free software: you can redistribute it and/or modify       
+  it under the terms of the GNU General Public License as published by     
+  the Free Software Foundation, either version 3 of the License, or        
+  (at your option) any later version.                                      
+                                                                           
+  fast-copy is distributed in the hope that it will be useful,            
+  but WITHOUT ANY WARRANTY; without even the implied warranty of           
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the             
+  GNU General Public License for more details.                             
+                                                                           
+  You should have received a copy of the GNU General Public License        
+  along with gfast-copy. If not, see <http://www.gnu.org/licenses/>
+
+

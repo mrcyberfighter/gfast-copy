@@ -1,0 +1,818 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- gfast-copy 1.0, Oct 19, 2017
+
+Brüggemann Eddie
+
+Copyright (C) 2017, Brüggemann Eddie
+ -->
+<!-- Created by GNU Texinfo 6.3, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>gfast-copy Documentation</title>
+
+<meta name="description" content="gfast-copy Documentation">
+<meta name="keywords" content="gfast-copy Documentation">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="#Top" rel="start" title="Top">
+<link href="#Index" rel="index" title="Index">
+<link href="#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="dir.html#Top" rel="up" title="(dir)">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+blockquote.smallindentedblock {margin-right: 0em; font-size: smaller}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en">
+<h1 class="settitle" align="center">gfast-copy Documentation</h1>
+
+
+
+<a name="SEC_Contents"></a>
+<h2 class="contents-heading">Table of Contents</h2>
+
+<div class="contents">
+
+<ul class="no-bullet">
+  <li><a name="toc-gfast_002dcopy-1" href="#gfast_002dcopy">1 gfast-copy</a>
+  <ul class="no-bullet">
+    <li><a name="toc-Introduction-1" href="#Introduction">1.1 Introduction</a></li>
+    <li><a name="toc-Graphical-User-Interface-description-1" href="#Graphical-User-Interface-description">1.2 Graphical User Interface description</a>
+    <ul class="no-bullet">
+      <li><a name="toc-Interface-1" href="#Interface">1.2.1 Interface</a></li>
+      <li><a name="toc-Menu-bar-1" href="#Menu-bar">1.2.2 Menu bar</a></li>
+    </ul></li>
+    <li><a name="toc-NOTE-1" href="#NOTE">1.3 NOTE</a></li>
+    <li><a name="toc-Credits-1" href="#Credits">1.4 Credits</a>
+    <ul class="no-bullet">
+      <li><a name="toc-Windows-_002a_002eexe-file" href="#Windows-_002a-exe-file">1.4.1 Windows *.exe file</a></li>
+    </ul></li>
+    <li><a name="toc-License-1" href="#License">1.5 License</a></li>
+  </ul></li>
+  <li><a name="toc-fast_002dcopy-1" href="#fast_002dcopy">2 fast-copy</a>
+  <ul class="no-bullet">
+    <li><a name="toc-fast_002dcopy-command_002dline-tool-1" href="#fast_002dcopy-command_002dline-tool">2.1 fast-copy command-line tool</a></li>
+    <li><a name="toc-Options-1" href="#Options">2.2 Options</a></li>
+    <li><a name="toc-How-does-the-algorithm-work-1" href="#How-does-the-algorithm-work">2.3 How does the algorithm work</a></li>
+    <li><a name="toc-Wrapper-script-1" href="#Wrapper-script">2.4 Wrapper script</a></li>
+    <li><a name="toc-Copyright-1" href="#Copyright">2.5 Copyright</a></li>
+  </ul></li>
+  <li><a name="toc-Index-1" href="#Index">Index</a></li>
+</ul>
+</div>
+
+
+
+
+<a name="Top"></a>
+<div class="header">
+<p>
+Next: <a href="#gfast_002dcopy" accesskey="n" rel="next">gfast-copy</a>, Up: <a href="dir.html#Top" accesskey="u" rel="up">(dir)</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Index" title="Index" rel="index">Index</a>]</p>
+</div>
+<a name="gfast_002dcopy-Documentation"></a>
+<h1 class="top">gfast-copy Documentation</h1>
+<blockquote>
+<p>gfast-copy 1.0, Oct 19, 2017
+</p>
+<p>Brüggemann Eddie
+</p>
+<p>Copyright &copy; 2017, Brüggemann Eddie
+</p></blockquote>
+
+
+
+<a name="index-doc"></a><a name="g_t0"></a>
+
+
+
+
+
+
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="#gfast_002dcopy" accesskey="1">gfast-copy</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#fast_002dcopy" accesskey="2">fast-copy</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Index" accesskey="3">Index</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+
+</pre></th></tr><tr><th colspan="3" align="left" valign="top"><pre class="menu-comment"> &mdash; The Detailed Node Listing &mdash;
+
+gfast-copy
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="#Introduction" accesskey="4">Introduction</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Graphical-User-Interface-description" accesskey="5">Graphical User Interface description</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#NOTE" accesskey="6">NOTE</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Credits" accesskey="7">Credits</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#License" accesskey="8">License</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+
+Graphical User Interface description
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="#Interface" accesskey="9">Interface</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Menu-bar">Menu bar</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+
+Credits
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="#Windows-_002a-exe-file">Windows *.exe file</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+
+fast-copy
+
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="#fast_002dcopy-command_002dline-tool">fast-copy command-line tool</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Options">Options</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-does-the-algorithm-work">How does the algorithm work</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Wrapper-script">Wrapper script</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Copyright">Copyright</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+
+</pre></th></tr></table>
+
+<hr>
+<a name="gfast_002dcopy"></a>
+<div class="header">
+<p>
+Next: <a href="#fast_002dcopy" accesskey="n" rel="next">fast-copy</a>, Previous: <a href="#Top" accesskey="p" rel="prev">Top</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Index" title="Index" rel="index">Index</a>]</p>
+</div>
+<a name="gfast_002dcopy-welcome_002dto_002dgfast_002dcopy_002ds_002ddocumentation"></a><a name="g_t1"></a><a name="gfast_002dcopy-gfast_002dcopy"></a><a name="g_t2"></a><a name="gfast_002dcopy-doc"></a><a name="g_t3"></a><a name="gfast_002dcopy-1"></a>
+<h2 class="chapter">1 gfast-copy</h2>
+
+
+<br><p>program: 
+<code>gfast-copy</code> (a graphical fast chunk file copy program.)
+</p>
+
+<br><p>author: 
+Eddie Brüggemann &lt;<a href="mailto:mrcyberfighter@gmail.com">mrcyberfighter@gmail.com</a>&gt;
+</p>
+
+<br><p>language: 
+`C'
+</p>
+
+<br><p>version: 
+1.0
+</p>
+
+<br><p>release: 
+Oct 19, 2017
+</p>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="#Introduction" accesskey="1">Introduction</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Graphical-User-Interface-description" accesskey="2">Graphical User Interface description</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#NOTE" accesskey="3">NOTE</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Credits" accesskey="4">Credits</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#License" accesskey="5">License</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+
+</pre></th></tr></table>
+
+<hr>
+<a name="Introduction"></a>
+<div class="header">
+<p>
+Next: <a href="#Graphical-User-Interface-description" accesskey="n" rel="next">Graphical User Interface description</a>, Up: <a href="#gfast_002dcopy" accesskey="u" rel="up">gfast-copy</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Index" title="Index" rel="index">Index</a>]</p>
+</div>
+<a name="gfast_002dcopy-introduction"></a><a name="g_t4"></a><a name="Introduction-1"></a>
+<h3 class="section">1.1 Introduction</h3>
+
+
+<p><code>gfast-copy</code> stands for `Graphical' `Fast' `Copy' and it is build on a <a href="#g_t5">very fast copying algorithm</a>.
+</p>
+<table class="cartouche" border="1"><tr><td>
+<blockquote>
+<p><b>Note:</b> This tool is implemented into the UNIX spirit:
+</p>
+<p>A single program which can do an unique task but do it well.
+</p>
+<p>It copy a single file to a destination in a practice way.
+</p>
+<p>As fast as it can !!!
+</p></blockquote>
+</td></tr></table>
+
+<p><code>gfast-copy</code> only provides a graphical interface for the <code>fast-copy</code> command-line tool,
+</p>
+<p>that I have implement. Which can copy a file like a film (Around <code>700</code> `Mo') in few seconds.
+</p>
+<table class="cartouche" border="1"><tr><td>
+<blockquote>
+<p><b>Note:</b> I have implement it because I often copy videos from a location to another:
+</p>
+<p>Per example from the folder named <code>ToWatch</code> to the folder <code>Seen</code>.
+</p>
+<p>Or *.iso images from the folder <code>Download</code> to the folder <code>ISO_Collection</code>.
+</p>
+<p>Because the <abbr title="Operating System">O.S</abbr> (Operating System) can be slow by chunk copy operations.
+</p></blockquote>
+</td></tr></table>
+
+<hr>
+<a name="Graphical-User-Interface-description"></a>
+<div class="header">
+<p>
+Next: <a href="#NOTE" accesskey="n" rel="next">NOTE</a>, Previous: <a href="#Introduction" accesskey="p" rel="prev">Introduction</a>, Up: <a href="#gfast_002dcopy" accesskey="u" rel="up">gfast-copy</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Index" title="Index" rel="index">Index</a>]</p>
+</div>
+<a name="gfast_002dcopy-graphical_002duser_002dinterface_002ddescription"></a><a name="g_t6"></a><a name="Graphical-User-Interface-description-1"></a>
+<h3 class="section">1.2 Graphical User Interface description</h3>
+
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="#Interface" accesskey="1">Interface</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Menu-bar" accesskey="2">Menu bar</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+
+</pre></th></tr></table>
+
+<hr>
+<a name="Interface"></a>
+<div class="header">
+<p>
+Next: <a href="#Menu-bar" accesskey="n" rel="next">Menu bar</a>, Up: <a href="#Graphical-User-Interface-description" accesskey="u" rel="up">Graphical User Interface description</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Index" title="Index" rel="index">Index</a>]</p>
+</div>
+<a name="gfast_002dcopy-interface"></a><a name="g_t7"></a><a name="Interface-1"></a>
+<h4 class="subsection">1.2.1 Interface</h4>
+
+
+<p>You get to verticaly align buttons:
+</p>
+
+<ol>
+<li> <code>Source</code>
+
+</li><li> <code>Destination</code>
+</li></ol>
+
+<p>Use the <code>Source</code> labeled button to set `the file to copy' Source (<code>Ctrl + S</code>).
+</p>
+<blockquote>
+
+<p>This will display the `basename' of the file to copy `onto the button'.
+</p></blockquote>
+
+<p>Use the <code>Destination</code> labeled button to set `the file destination' Destination (<code>Ctrl + D</code>).
+</p>
+<blockquote>
+
+<p>This will display the basename you have choose for the destination file.
+</p></blockquote>
+
+<p>And at they are 2 icons buttons:
+</p>
+
+<ul class="no-bullet">
+<li>+ Remove source file toggle button (<code>Ctrl + R</code>).
+
+</li><li>+ Run copying (<code>Ctrl + Return</code>).
+</li></ul>
+
+<br><p>note: 
+Take a look at my self-builded GtkSmartIconButton widgets.
+</p>
+
+<p>Once the copying done, the button contains their original string and icons.
+</p>
+<hr>
+<a name="Menu-bar"></a>
+<div class="header">
+<p>
+Previous: <a href="#Interface" accesskey="p" rel="prev">Interface</a>, Up: <a href="#Graphical-User-Interface-description" accesskey="u" rel="up">Graphical User Interface description</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Index" title="Index" rel="index">Index</a>]</p>
+</div>
+<a name="gfast_002dcopy-menu_002dbar"></a><a name="g_t8"></a><a name="Menu-bar-1"></a>
+<h4 class="subsection">1.2.2 Menu bar</h4>
+
+
+<p>You get a menu bar too with few menu buttons.
+</p>
+
+<ol>
+<li> Files
+</li></ol>
+
+<blockquote>
+
+
+<ul class="no-bullet">
+<li>+ Files &ndash;&gt; Set source file (<code>Ctrl + S</code>).
+
+</li><li>+ Files &ndash;&gt; Set destination file (<code>Ctrl + D</code>).
+
+</li><li>+ Files &ndash;&gt; Run copying (<code>Ctrl + Return</code>).
+
+</li><li>+ Quit (<code>Ctrl + Q</code>).
+</li></ul>
+</blockquote>
+
+
+<ol start="2">
+<li> Configuration
+</li></ol>
+
+<blockquote>
+
+
+<ul class="no-bullet">
+<li>+ Configuration &ndash;&gt; Light theme.
+
+</li><li>+ Configuration &ndash;&gt; Dark theme.
+</li></ul>
+
+<p>these are radiobuttons to choose your theming.
+</p>
+
+<ul class="no-bullet">
+<li>+ Configuration &ndash;&gt; Delete source file (<code>Ctrl + R</code>).
+</li></ul>
+</blockquote>
+
+
+<ol start="3">
+<li> Info ?
+</li></ol>
+
+<blockquote>
+
+
+<ul class="no-bullet">
+<li>+ Info ? &ndash;&gt; Read me (<code>Ctrl + N</code>).
+
+</li><li>+ Info ? &ndash;&gt; About (<code>Ctrl + A</code>).
+</li></ul>
+</blockquote>
+
+<hr>
+<a name="NOTE"></a>
+<div class="header">
+<p>
+Next: <a href="#Credits" accesskey="n" rel="next">Credits</a>, Previous: <a href="#Graphical-User-Interface-description" accesskey="p" rel="prev">Graphical User Interface description</a>, Up: <a href="#gfast_002dcopy" accesskey="u" rel="up">gfast-copy</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Index" title="Index" rel="index">Index</a>]</p>
+</div>
+<a name="gfast_002dcopy-note"></a><a name="g_t9"></a><a name="NOTE-1"></a>
+<h3 class="section">1.3 NOTE</h3>
+
+
+<p>I have implement this tool for my personal requirement: good by Hollywood !
+</p>
+<p>So if you think your system is too slow by copying chunk (big) files use (g)fast-copy !
+</p>
+<hr>
+<a name="Credits"></a>
+<div class="header">
+<p>
+Next: <a href="#License" accesskey="n" rel="next">License</a>, Previous: <a href="#NOTE" accesskey="p" rel="prev">NOTE</a>, Up: <a href="#gfast_002dcopy" accesskey="u" rel="up">gfast-copy</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Index" title="Index" rel="index">Index</a>]</p>
+</div>
+<a name="gfast_002dcopy-credits"></a><a name="a"></a><a name="Credits-1"></a>
+<h3 class="section">1.4 Credits</h3>
+
+
+<p>Thanks to my beloved mother, my family and the doctors.
+</p>
+<p>Stay away from drugs drugs destroy your brain and your life.
+</p>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="#Windows-_002a-exe-file" accesskey="1">Windows *.exe file</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+
+</pre></th></tr></table>
+
+<hr>
+<a name="Windows-_002a-exe-file"></a>
+<div class="header">
+<p>
+Up: <a href="#Credits" accesskey="u" rel="up">Credits</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Index" title="Index" rel="index">Index</a>]</p>
+</div>
+<a name="gfast_002dcopy-windows_002dexe_002dfile"></a><a name="b"></a><a name="Windows-_002a_002eexe-file"></a>
+<h4 class="subsection">1.4.1 Windows *.exe file</h4>
+
+
+<p>Thanks to the gnome-bugzilla team which help to provide you a version of (g)fast-copy.
+</p>
+<p>Without their help only the MSYS2 and Cygwin users would be able to launch (g)fast-copy.
+</p>
+<hr>
+<a name="License"></a>
+<div class="header">
+<p>
+Previous: <a href="#Credits" accesskey="p" rel="prev">Credits</a>, Up: <a href="#gfast_002dcopy" accesskey="u" rel="up">gfast-copy</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Index" title="Index" rel="index">Index</a>]</p>
+</div>
+<a name="gfast_002dcopy-license"></a><a name="c"></a><a name="License-1"></a>
+<h3 class="section">1.5 License</h3>
+
+
+<div class="example">
+<pre class="example">gfast-copy an easy to use graphical fast copy tool for big files.
+
+Copyright (C) 2017 Brüggemann Eddie.
+
+This file is part of gfast-copy.
+gfast-copy is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+gfast-copy is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with gfast-copy. If not, see &lt;http://www.gnu.org/licenses/&gt;
+</pre></div>
+
+
+
+
+
+
+
+
+<hr>
+<a name="fast_002dcopy"></a>
+<div class="header">
+<p>
+Next: <a href="#Index" accesskey="n" rel="next">Index</a>, Previous: <a href="#gfast_002dcopy" accesskey="p" rel="prev">gfast-copy</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Index" title="Index" rel="index">Index</a>]</p>
+</div>
+<a name="fast_002dcopy-fast_002dcopy"></a><a name="d"></a><a name="fast_002dcopy-doc"></a><a name="e"></a><a name="fast_002dcopy-id1"></a><a name="f"></a><a name="fast_002dcopy-1"></a>
+<h2 class="chapter">2 fast-copy</h2>
+
+
+<br><p>program: 
+<code>fast-copy</code> (a fast chunk file copy program).
+</p>
+
+<br><p>author: 
+Eddie Brüggemann &lt;<a href="mailto:mrcyberfighter@gmail.com">mrcyberfighter@gmail.com</a>&gt;
+</p>
+
+<br><p>language: 
+`C'
+</p>
+
+<br><p>version: 
+1.0
+</p>
+
+<br><p>release: 
+Oct 19, 2017
+</p>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="#fast_002dcopy-command_002dline-tool" accesskey="1">fast-copy command-line tool</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Options" accesskey="2">Options</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#How-does-the-algorithm-work" accesskey="3">How does the algorithm work</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Wrapper-script" accesskey="4">Wrapper script</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="#Copyright" accesskey="5">Copyright</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+
+</pre></th></tr></table>
+
+<hr>
+<a name="fast_002dcopy-command_002dline-tool"></a>
+<div class="header">
+<p>
+Next: <a href="#Options" accesskey="n" rel="next">Options</a>, Up: <a href="#fast_002dcopy" accesskey="u" rel="up">fast-copy</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Index" title="Index" rel="index">Index</a>]</p>
+</div>
+<a name="fast_002dcopy-fast_002dcopy_002dcommand_002dline_002dtool"></a><a name="g_t10"></a><a name="fast_002dcopy-command_002dline-tool-1"></a>
+<h3 class="section">2.1 fast-copy command-line tool</h3>
+
+
+<p><code>fast-copy</code> is a `command-line tool' which can work in 2 different fashions:
+</p>
+
+<ul class="no-bullet">
+<li>+ Using <abbr title="System Calls">syscall&rsquo;s</abbr> (System Calls).
+
+</li><li>+ Using a <code>FILE</code> `streams' pointer.
+</li></ul>
+
+<br><p>note: 
+Per default it make usage of the file streams.
+</p>
+
+<p><code>fast-copy</code> determine the best buffer size and then process displaying a fancy progress-bar if needed into the terminal.
+</p>
+<p>Fast copy takes at least 2 argument the source and the destination to copy the file on `GNU'/`Linux' and `MacOSX'.
+</p>
+<br><p>windows: 
+The command-line tool is available under `Windows' using only the `file streams' and no `progress-bar' feature is provided.
+</p>
+
+<hr>
+<a name="Options"></a>
+<div class="header">
+<p>
+Next: <a href="#How-does-the-algorithm-work" accesskey="n" rel="next">How does the algorithm work</a>, Previous: <a href="#fast_002dcopy-command_002dline-tool" accesskey="p" rel="prev">fast-copy command-line tool</a>, Up: <a href="#fast_002dcopy" accesskey="u" rel="up">fast-copy</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Index" title="Index" rel="index">Index</a>]</p>
+</div>
+<a name="fast_002dcopy-options"></a><a name="g_t11"></a><a name="Options-1"></a>
+<h3 class="section">2.2 Options</h3>
+
+
+<div class="example">
+<pre class="example">$ fast-copy -h
+fast-copy - a fast chunk file copy program.
+
+Usage : fast-copy -r input-file -w output-file [-o] [-e] [-s] [-h]
+
+        -r Read from file (required).
+        -w Write to file  (required).
+        -o Overwrite destination file (optional).
+        -e Erase source file (optional).
+        -s Use syscalls instead of streams (optional only UNIX).
+        -h Print this help message.
+
+- Copyright (©) 2017 Brüggemann Eddie &lt;mrcyberfighter@gmail.com&gt; GPLv3.
+$
+</pre></div>
+
+<p>&mdash;
+</p>
+<a name="index-command-line-option_003b-_002dr"></a>
+<a name="fast_002dcopy-cmdoption_002dr"></a><a name="g_t12"></a><dl>
+<dt><a name="index-_002dr"></a>Option: <strong><span class="nolinebreak">-</span><!-- /@w -->r</strong></dt>
+<dd>
+<p>-r (read from file) &ndash;&gt; Input file (required).
+</p></dd></dl>
+
+<a name="index-command-line-option_003b-_002dw"></a>
+<a name="fast_002dcopy-cmdoption_002dw"></a><a name="g_t13"></a><dl>
+<dt><a name="index-_002dw"></a>Option: <strong><span class="nolinebreak">-</span><!-- /@w -->w</strong></dt>
+<dd>
+<p>-w (write to file)  &ndash;&gt; Output file (required).
+</p></dd></dl>
+
+<a name="index-command-line-option_003b-_002do"></a>
+<a name="fast_002dcopy-cmdoption_002do"></a><a name="g_t14"></a><dl>
+<dt><a name="index-_002do"></a>Option: <strong><span class="nolinebreak">-</span><!-- /@w -->o</strong></dt>
+<dd>
+<p>-o (overwrite) &ndash;&gt; Overwrite destination file (optional).
+</p></dd></dl>
+
+<a name="index-command-line-option_003b-_002de"></a>
+<a name="fast_002dcopy-cmdoption_002de"></a><a name="g_t15"></a><dl>
+<dt><a name="index-_002de"></a>Option: <strong><span class="nolinebreak">-</span><!-- /@w -->e</strong></dt>
+<dd>
+<p>-e (erase) &ndash;&gt; Erase source file (optional).
+</p></dd></dl>
+
+<a name="index-command-line-option_003b-_002ds"></a>
+<a name="fast_002dcopy-cmdoption_002ds"></a><a name="g_t16"></a><dl>
+<dt><a name="index-_002ds"></a>Option: <strong><span class="nolinebreak">-</span><!-- /@w -->s</strong></dt>
+<dd>
+<p>-s (syscalls) &ndash;&gt; Use syscall instead of streams (optional only UNIX).
+</p></dd></dl>
+
+<a name="index-command-line-option_003b-_002dh"></a>
+<a name="fast_002dcopy-cmdoption_002dh"></a><a name="g_t17"></a><dl>
+<dt><a name="index-_002dh"></a>Option: <strong><span class="nolinebreak">-</span><!-- /@w -->h</strong></dt>
+<dd>
+<p>-h (help) -&gt; Print help message.
+</p></dd></dl>
+
+<p>&mdash;
+</p>
+<p>The default behavior is to copy `source' to `destination' file using `file stream', which you can change using the -s switch on UNIX systems.
+</p>
+<p>If the destination file exists <code>fast-copy</code> will ask interactively what to do: overwrite or not the file.
+</p>
+<p>The progress bar is only displayed for files greater than : <code>sizeof_file &gt; (blocksize * 8 * 16 * 16)</code>
+</p>
+<p>This value mean to be <code>16 Mio</code> using `syscalls' or using `file streams' on my system.
+</p>
+<br><p>note: 
+The <code>blocksize</code> is computed to get the best buffer size: the number of bytes by the copying operation an,d is system dependent.
+</p>
+
+<p>Finally <code>fast-copy</code> will synchronize the file system.
+</p>
+<p>&mdash;
+</p>
+<p>You can inhibit the interactive overwriting questioning by using th -o &gt; (overwrite) switch.
+</p>
+<p>&mdash;
+</p>
+<p>You can tell program:<cite>fast-copy</cite> to use syscalls (open, read and write) using the -s &ndash;&gt; (syscall) switch.
+</p>
+<p>To know that by every `blocksize' copy a <abbr title="System Call">syscall</abbr> (System Call) will be made by handle by the `kernel'.
+</p>
+<p>Else `file streams' are buffered operations avoiding calling <abbr title="System Call">syscall</abbr> to often.
+</p>
+<p>&mdash;
+</p>
+<p>You can tell <code>fast-copy</code> to erase the source file once the copy work done using the -e -&gt; (erase) switch.
+</p>
+<hr>
+<a name="How-does-the-algorithm-work"></a>
+<div class="header">
+<p>
+Next: <a href="#Wrapper-script" accesskey="n" rel="next">Wrapper script</a>, Previous: <a href="#Options" accesskey="p" rel="prev">Options</a>, Up: <a href="#fast_002dcopy" accesskey="u" rel="up">fast-copy</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Index" title="Index" rel="index">Index</a>]</p>
+</div>
+<a name="fast_002dcopy-how_002ddoes_002dthe_002dalgorithm_002dwork"></a><a name="g_t18"></a><a name="fast_002dcopy-fast_002dcopy_002dalgorithm"></a><a name="g_t5"></a><a name="How-does-the-algorithm-work-1"></a>
+<h3 class="section">2.3 How does the algorithm work</h3>
+
+
+
+<ol>
+<li> At first it will check for the best buffer size.
+</li></ol>
+
+<table class="cartouche" border="1"><tr><td>
+<blockquote>
+
+<ul class="no-bullet">
+<li>+ Using file streams: it will look up the <code>BUFSIZ</code> constant if it&rsquo;s great enough else the program set it to 8192 octets.
+
+</li><li>+ Using syscalls it will look up the the <code>st_blocksize</code> from the <code>stat()</code> function and set it as buffer size.
+</li></ul>
+</blockquote>
+</td></tr></table>
+
+
+<ol start="2">
+<li> Then it will define a buffer with the optimal size.
+
+</li><li> It will copy the source file to the destination in a loop using the defined buffer.
+
+</li><li> Finally it will synchronize the file-system using <code>fflush()</code> or <code>fsync()</code>.
+</li></ol>
+
+<hr>
+<a name="Wrapper-script"></a>
+<div class="header">
+<p>
+Next: <a href="#Copyright" accesskey="n" rel="next">Copyright</a>, Previous: <a href="#How-does-the-algorithm-work" accesskey="p" rel="prev">How does the algorithm work</a>, Up: <a href="#fast_002dcopy" accesskey="u" rel="up">fast-copy</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Index" title="Index" rel="index">Index</a>]</p>
+</div>
+<a name="fast_002dcopy-wrapper_002dscript"></a><a name="g_t19"></a><a name="Wrapper-script-1"></a>
+<h3 class="section">2.4 Wrapper script</h3>
+
+
+<p>You can build a wrapper script around the <code>fast-copy</code> command-line tool,
+</p>
+<p>per example using <code>zenity</code>, <code>xclip</code> or like, to get the first argument.
+</p>
+<p>And for the second you need a tool which provides a file-chooser.
+</p>
+<p>As like this one, using zenity and nautilus-action:
+</p>
+<div class="example">
+<pre class="example">#! /bin/bash
+
+###############################################################
+# Wrapper for fast-copy using zenity and nautilus-actions for #
+# speed up the file copying.                                  #
+###############################################################
+
+function usage() {
+
+  echo &quot;usage $(basename $0) -r input-file -w output-file [-o] [-s] [-e] [-h]&quot; ;
+
+  exit 1 ;
+}
+
+if [[ $# -ne 1 ]] ; then
+
+  # The first argument is given from nautilus-actions.
+
+  usage ;
+
+fi
+
+destination=`zenity --file-selection --save --confirm-overwrite --filename=&quot;$(basename &quot;${1}&quot;)&quot;`
+
+# Here the source file comes from nautilus action i.e
+# the contextual gnome-desktop add-on nautilus-actions
+source_filepath=${1}
+
+if [[ -n &quot;${destination}&quot; ]] ; then
+
+  fast-copy -r &quot;${source_filepath}&quot; -w &quot;${destination}&quot; -o
+
+  zenity --info --text=&quot;Copy completed&quot; --no-wrap --no-markup
+
+fi
+
+exit 0
+</pre></div>
+
+<hr>
+<a name="Copyright"></a>
+<div class="header">
+<p>
+Previous: <a href="#Wrapper-script" accesskey="p" rel="prev">Wrapper script</a>, Up: <a href="#fast_002dcopy" accesskey="u" rel="up">fast-copy</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Index" title="Index" rel="index">Index</a>]</p>
+</div>
+<a name="fast_002dcopy-copyright"></a><a name="g_t1a"></a><a name="Copyright-1"></a>
+<h3 class="section">2.5 Copyright</h3>
+
+
+<div class="example">
+<pre class="example">fast-copy - a fast single chunk file copy program.
+
+Copyright (C) 2017 Brüggemann Eddie.
+
+This file is part of fast-copy.
+fast-copy is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+fast-copy is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with gfast-copy. If not, see &lt;http://www.gnu.org/licenses/&gt;
+</pre></div>
+
+<hr>
+<a name="Index"></a>
+<div class="header">
+<p>
+Previous: <a href="#fast_002dcopy" accesskey="p" rel="prev">fast-copy</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Index" title="Index" rel="index">Index</a>]</p>
+</div>
+<a name="Index-1"></a>
+<h2 class="unnumbered">Index</h2>
+
+
+<table><tr><th valign="top">Jump to: &nbsp; </th><td><a class="summary-letter" href="#Index_ge_letter-C"><b>C</b></a>
+ &nbsp; 
+</td></tr></table>
+<table class="index-ge" border="0">
+<tr><td></td><th align="left">Index Entry</th><td>&nbsp;</td><th align="left"> Section</th></tr>
+<tr><td colspan="4"> <hr></td></tr>
+<tr><th><a name="Index_ge_letter-C">C</a></th><td></td><td></td></tr>
+<tr><td></td><td valign="top"><a href="#index-command-line-option_003b-_002de">command line option; -e</a>:</td><td>&nbsp;</td><td valign="top"><a href="#Options">Options</a></td></tr>
+<tr><td></td><td valign="top"><a href="#index-command-line-option_003b-_002dh">command line option; -h</a>:</td><td>&nbsp;</td><td valign="top"><a href="#Options">Options</a></td></tr>
+<tr><td></td><td valign="top"><a href="#index-command-line-option_003b-_002do">command line option; -o</a>:</td><td>&nbsp;</td><td valign="top"><a href="#Options">Options</a></td></tr>
+<tr><td></td><td valign="top"><a href="#index-command-line-option_003b-_002dr">command line option; -r</a>:</td><td>&nbsp;</td><td valign="top"><a href="#Options">Options</a></td></tr>
+<tr><td></td><td valign="top"><a href="#index-command-line-option_003b-_002ds">command line option; -s</a>:</td><td>&nbsp;</td><td valign="top"><a href="#Options">Options</a></td></tr>
+<tr><td></td><td valign="top"><a href="#index-command-line-option_003b-_002dw">command line option; -w</a>:</td><td>&nbsp;</td><td valign="top"><a href="#Options">Options</a></td></tr>
+<tr><td colspan="4"> <hr></td></tr>
+</table>
+<table><tr><th valign="top">Jump to: &nbsp; </th><td><a class="summary-letter" href="#Index_ge_letter-C"><b>C</b></a>
+ &nbsp; 
+</td></tr></table>
+
+
+<hr>
+
+
+
+</body>
+</html>

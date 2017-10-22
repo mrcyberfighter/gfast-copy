@@ -1,0 +1,420 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>gfast-copy 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head>
+  <body role="document">
+      <div class="header" role="banner"><img class="rightlogo" src="_static/gfast-copy_icon.png" alt="Logo"/><h1 class="heading"><a href="index.html#document-index">
+          <span>gfast-copy 1.0 documentation</span></a></h1>
+        <h2 class="heading"><span>gfast-copy 1.0 documentation</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        <a class="uplink" href="index.html#document-index">Contents</a>
+        </p>
+
+      </div>
+      <div class="content">
+        
+        
+  <div class="section" id="welcome-to-gfast-copy-s-documentation">
+<h1>Welcome to gfast-copy&#8217;s documentation!<a class="headerlink" href="#welcome-to-gfast-copy-s-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<span id="document-gfast-copy"></span><div class="section" id="gfast-copy">
+<h2>gfast-copy<a class="headerlink" href="#gfast-copy" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">program:</th><td class="field-body"><strong class="program">gfast-copy</strong> (a graphical fast chunk file copy program.)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">author:</th><td class="field-body">Eddie Brüggemann &lt;<a class="reference external" href="mailto:mrcyberfighter&#37;&#52;&#48;gmail&#46;com">mrcyberfighter<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">language:</th><td class="field-body"><strong>C</strong></td>
+</tr>
+<tr class="field-even field"><th class="field-name">version:</th><td class="field-body">1.0</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">release:</th><td class="field-body">Oct 19, 2017</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="introduction">
+<h3>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h3>
+<p><strong class="program">gfast-copy</strong> stands for <strong>Graphical</strong> <strong>Fast</strong> <strong>Copy</strong> and it is build on a <a class="reference internal" href="index.html#fast-copy-algorithm"><span class="std std-ref">very fast copying algorithm</span></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>This tool is implemented into the UNIX spirit:</p>
+<p>A single program which can do an unique task but do it well.</p>
+<p>It copy a single file to a destination in a practice way.</p>
+<p class="last">As fast as it can !!!</p>
+</div>
+<p><strong class="program">gfast-copy</strong> only provides a graphical interface for the <strong class="program">fast-copy</strong> command-line tool,</p>
+<p>that I have implement. Which can copy a file like a film (Around <code class="docutils literal"><span class="pre">700</span></code> <strong>Mo</strong>) in few seconds.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>I have implement it because I often copy videos from a location to another:</p>
+<p>Per example from the folder named <code class="docutils literal"><span class="pre">ToWatch</span></code> to the folder <code class="docutils literal"><span class="pre">Seen</span></code>.</p>
+<p>Or *.iso images from the folder <code class="docutils literal"><span class="pre">Download</span></code> to the folder <code class="docutils literal"><span class="pre">ISO_Collection</span></code>.</p>
+<p class="last">Because the <abbr title="Operating System">O.S</abbr> can be slow by chunk copy operations.</p>
+</div>
+</div>
+<div class="section" id="graphical-user-interface-description">
+<h3>Graphical User Interface description<a class="headerlink" href="#graphical-user-interface-description" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="interface">
+<h4>Interface<a class="headerlink" href="#interface" title="Permalink to this headline">¶</a></h4>
+<p>You get to verticaly align buttons:</p>
+<ol class="arabic simple">
+<li><code class="docutils literal"><span class="pre">Source</span></code></li>
+<li><code class="docutils literal"><span class="pre">Destination</span></code></li>
+</ol>
+<p>Use the <code class="docutils literal"><span class="pre">Source</span></code> labeled button to set <em>the file to copy</em> <span class="guilabel"><span class="accelerator">S</span>ource</span> (<code class="kbd docutils literal"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">S</span></code>).</p>
+<blockquote>
+<div>This will display the <em>basename</em> of the file to copy <em>onto the button</em>.</div></blockquote>
+<p>Use the <code class="docutils literal"><span class="pre">Destination</span></code> labeled button to set <em>the file destination</em> <span class="guilabel"><span class="accelerator">D</span>estination</span> (<code class="kbd docutils literal"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">D</span></code>).</p>
+<blockquote>
+<div>This will display the basename you have choose for the destination file.</div></blockquote>
+<p>And at they are 2 icons buttons:</p>
+<ul class="simple">
+<li><span class="guilabel"><span class="accelerator">R</span>emove</span> source file toggle button (<code class="kbd docutils literal"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">R</span></code>).</li>
+<li>Run copying (<code class="kbd docutils literal"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">Return</span></code>).</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">note:</th><td class="field-body">Take a look at my self-builded GtkSmartIconButton widgets.</td>
+</tr>
+</tbody>
+</table>
+<p>Once the copying done, the button contains their original string and icons.</p>
+</div>
+<div class="section" id="menu-bar">
+<h4>Menu bar<a class="headerlink" href="#menu-bar" title="Permalink to this headline">¶</a></h4>
+<p>You get a menu bar too with few menu buttons.</p>
+<ol class="arabic simple">
+<li>Files</li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><span class="guilabel">Files &#8211;&gt; Set <span class="accelerator">s</span>ource file</span> (<code class="kbd docutils literal"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">S</span></code>).</li>
+<li><span class="guilabel">Files &#8211;&gt; Set <span class="accelerator">d</span>estination file</span> (<code class="kbd docutils literal"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">D</span></code>).</li>
+<li><span class="guilabel">Files &#8211;&gt; Run copying</span> (<code class="kbd docutils literal"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">Return</span></code>).</li>
+<li><span class="guilabel"><span class="accelerator">Q</span>uit</span> (<code class="kbd docutils literal"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">Q</span></code>).</li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li>Configuration</li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><span class="guilabel">Configuration &#8211;&gt; Light theme</span>.</li>
+<li><span class="guilabel">Configuration &#8211;&gt; Dark theme</span>.</li>
+</ul>
+<p>these are radiobuttons to choose your theming.</p>
+<ul class="simple">
+<li><span class="guilabel">Configuration &#8211;&gt; Delete source file</span> (<code class="kbd docutils literal"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">R</span></code>).</li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li>Info ?</li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><span class="guilabel">Info ? &#8211;&gt; Read me</span> (<code class="kbd docutils literal"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">N</span></code>).</li>
+<li><span class="guilabel">Info ? &#8211;&gt; <span class="accelerator">A</span>bout</span> (<code class="kbd docutils literal"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">A</span></code>).</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="note">
+<h3>NOTE<a class="headerlink" href="#note" title="Permalink to this headline">¶</a></h3>
+<p>I have implement this tool for my personal requirement: good by Hollywood !</p>
+<p>So if you think your system is too slow by copying chunk (big) files use (g)fast-copy !</p>
+</div>
+<div class="section" id="credits">
+<h3>Credits<a class="headerlink" href="#credits" title="Permalink to this headline">¶</a></h3>
+<p>Thanks to my beloved mother, my family and the doctors.</p>
+<p>Stay away from drugs drugs destroy your brain and your life.</p>
+<div class="section" id="windows-exe-file">
+<h4>Windows *.exe file<a class="headerlink" href="#windows-exe-file" title="Permalink to this headline">¶</a></h4>
+<p>Thanks to the gnome-bugzilla team which help to provide you a version of (g)fast-copy.</p>
+<p>Without their help only the MSYS2 and Cygwin users would be able to launch (g)fast-copy.</p>
+</div>
+</div>
+<div class="section" id="license">
+<h3>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-text"><div class="highlight"><pre><span></span>gfast-copy an easy to use graphical fast copy tool for big files.
+
+Copyright (C) 2017 Brüggemann Eddie.
+
+This file is part of gfast-copy.
+gfast-copy is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+gfast-copy is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with gfast-copy. If not, see &lt;http://www.gnu.org/licenses/&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<span id="document-fast-copy"></span><div class="section" id="fast-copy">
+<span id="id1"></span><h2>fast-copy<a class="headerlink" href="#fast-copy" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">program:</th><td class="field-body"><strong class="program">fast-copy</strong> (a fast chunk file copy program).</td>
+</tr>
+<tr class="field-even field"><th class="field-name">author:</th><td class="field-body">Eddie Brüggemann &lt;<a class="reference external" href="mailto:mrcyberfighter&#37;&#52;&#48;gmail&#46;com">mrcyberfighter<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">language:</th><td class="field-body"><strong>C</strong></td>
+</tr>
+<tr class="field-even field"><th class="field-name">version:</th><td class="field-body">1.0</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">release:</th><td class="field-body">Oct 19, 2017</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="fast-copy-command-line-tool">
+<h3>fast-copy command-line tool<a class="headerlink" href="#fast-copy-command-line-tool" title="Permalink to this headline">¶</a></h3>
+<p><strong class="program">fast-copy</strong> is a <strong>command-line tool</strong> which can work in 2 different fashions:</p>
+<ul class="simple">
+<li>Using <abbr title="System Calls">syscall&#8217;s</abbr>.</li>
+<li>Using a <code class="xref c c-type docutils literal"><span class="pre">FILE</span></code> <em>streams</em> pointer.</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">note:</th><td class="field-body">Per default it make usage of the file streams.</td>
+</tr>
+</tbody>
+</table>
+<p><strong class="program">fast-copy</strong> determine the best buffer size and then process displaying a fancy progress-bar if needed into the terminal.</p>
+<p>Fast copy takes at least 2 argument the source and the destination to copy the file on <strong>GNU</strong>/<strong>Linux</strong> and <strong>MacOSX</strong>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">windows:</th><td class="field-body">The command-line tool is available under <strong>Windows</strong> using only the <em>file streams</em> and no <strong>progress-bar</strong> feature is provided.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="options">
+<h3>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-text"><div class="highlight"><pre><span></span>$ fast-copy -h
+fast-copy - a fast chunk file copy program.
+
+Usage : fast-copy -r input-file -w output-file [-o] [-e] [-s] [-h]
+
+        -r Read from file (required).
+        -w Write to file  (required).
+        -o Overwrite destination file (optional).
+        -e Erase source file (optional).
+        -s Use syscalls instead of streams (optional only UNIX).
+        -h Print this help message.
+
+- Copyright (©) 2017 Brüggemann Eddie &lt;mrcyberfighter@gmail.com&gt; GPLv3.
+$
+</pre></div>
+</div>
+<p>&#8212;</p>
+<dl class="option">
+<dt id="cmdoption-r">
+<code class="descname">-r</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-r" title="Permalink to this definition">¶</a></dt>
+<dd><p><span class="guilabel">-r (read from file) &#8211;&gt; Input file (required).</span></p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-w">
+<code class="descname">-w</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-w" title="Permalink to this definition">¶</a></dt>
+<dd><p><span class="guilabel">-w (write to file)  &#8211;&gt; Output file (required).</span></p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-o">
+<code class="descname">-o</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-o" title="Permalink to this definition">¶</a></dt>
+<dd><p><span class="guilabel">-o (overwrite) &#8211;&gt; Overwrite destination file (optional).</span></p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-e">
+<code class="descname">-e</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-e" title="Permalink to this definition">¶</a></dt>
+<dd><p><span class="guilabel">-e (erase) &#8211;&gt; Erase source file (optional).</span></p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-s">
+<code class="descname">-s</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-s" title="Permalink to this definition">¶</a></dt>
+<dd><p><span class="guilabel">-s (syscalls) &#8211;&gt; Use syscall instead of streams (optional only UNIX).</span></p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-h">
+<code class="descname">-h</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-h" title="Permalink to this definition">¶</a></dt>
+<dd><p><span class="guilabel">-h (help) -&gt; Print help message.</span></p>
+</dd></dl>
+
+<p>&#8212;</p>
+<p>The default behavior is to copy <em>source</em> to <em>destination</em> file using <strong>file stream</strong>, which you can change using the -s switch on UNIX systems.</p>
+<p>If the destination file exists <strong class="program">fast-copy</strong> will ask interactively what to do: overwrite or not the file.</p>
+<p>The progress bar is only displayed for files greater than : <code class="docutils literal"><span class="pre">sizeof_file</span> <span class="pre">&gt;</span> <span class="pre">(blocksize</span> <span class="pre">*</span> <span class="pre">8</span> <span class="pre">*</span> <span class="pre">16</span> <span class="pre">*</span> <span class="pre">16)</span></code></p>
+<p>This value mean to be <code class="docutils literal"><span class="pre">16</span> <span class="pre">Mio</span></code> using <strong>syscalls</strong> or using <strong>file streams</strong> on my system.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">note:</th><td class="field-body">The <code class="xref c c-data docutils literal"><span class="pre">blocksize</span></code> is computed to get the best buffer size: the number of bytes by the copying operation an,d is system dependent.</td>
+</tr>
+</tbody>
+</table>
+<p>Finally <strong class="program">fast-copy</strong> will synchronize the file system.</p>
+<p>&#8212;</p>
+<p>You can inhibit the interactive overwriting questioning by using th <span class="guilabel">-o &gt; (overwrite)</span> switch.</p>
+<p>&#8212;</p>
+<p>You can tell program:<cite>fast-copy</cite> to use syscalls (open, read and write) using the <span class="guilabel">-s &#8211;&gt; (syscall)</span> switch.</p>
+<p>To know that by every <strong>blocksize</strong> copy a <abbr title="System Call">syscall</abbr> will be made by handle by the <strong>kernel</strong>.</p>
+<p>Else <strong>file streams</strong> are buffered operations avoiding calling <abbr title="System Call">syscall</abbr> to often.</p>
+<p>&#8212;</p>
+<p>You can tell <strong class="program">fast-copy</strong> to erase the source file once the copy work done using the <span class="guilabel">-e -&gt; (erase)</span> switch.</p>
+</div>
+<div class="section" id="how-does-the-algorithm-work">
+<span id="fast-copy-algorithm"></span><h3>How does the algorithm work<a class="headerlink" href="#how-does-the-algorithm-work" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>At first it will check for the best buffer size.</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>Using file streams: it will look up the <code class="xref c c-data docutils literal"><span class="pre">BUFSIZ</span></code> constant if it&#8217;s great enough else the program set it to 8192 octets.</li>
+<li>Using syscalls it will look up the the <code class="xref c c-member docutils literal"><span class="pre">st_blocksize</span></code> from the <code class="xref c c-func docutils literal"><span class="pre">stat()</span></code> function and set it as buffer size.</li>
+</ul>
+</div>
+<ol class="arabic simple" start="2">
+<li>Then it will define a buffer with the optimal size.</li>
+<li>It will copy the source file to the destination in a loop using the defined buffer.</li>
+<li>Finally it will synchronize the file-system using <code class="xref c c-func docutils literal"><span class="pre">fflush()</span></code> or <code class="xref c c-func docutils literal"><span class="pre">fsync()</span></code>.</li>
+</ol>
+</div>
+<div class="section" id="wrapper-script">
+<h3>Wrapper script<a class="headerlink" href="#wrapper-script" title="Permalink to this headline">¶</a></h3>
+<p>You can build a wrapper script around the <strong class="program">fast-copy</strong> command-line tool,</p>
+<p>per example using <strong class="program">zenity</strong>, <strong class="program">xclip</strong> or like, to get the first argument.</p>
+<p>And for the second you need a tool which provides a file-chooser.</p>
+<p>As like this one, using zenity and nautilus-action:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="ch">#! /bin/bash</span>
+
+<span class="c1">###############################################################</span>
+<span class="c1"># Wrapper for fast-copy using zenity and nautilus-actions for #</span>
+<span class="c1"># speed up the file copying.                                  #</span>
+<span class="c1">###############################################################</span>
+
+<span class="k">function</span> usage<span class="o">()</span> <span class="o">{</span>
+
+  <span class="nb">echo</span> <span class="s2">&quot;usage </span><span class="k">$(</span>basename <span class="nv">$0</span><span class="k">)</span><span class="s2"> -r input-file -w output-file [-o] [-s] [-e] [-h]&quot;</span> <span class="p">;</span>
+
+  <span class="nb">exit</span> <span class="m">1</span> <span class="p">;</span>
+<span class="o">}</span>
+
+<span class="k">if</span> <span class="o">[[</span> <span class="nv">$#</span> -ne <span class="m">1</span> <span class="o">]]</span> <span class="p">;</span> <span class="k">then</span>
+
+  <span class="c1"># The first argument is given from nautilus-actions.</span>
+
+  usage <span class="p">;</span>
+
+<span class="k">fi</span>
+
+<span class="nv">destination</span><span class="o">=</span><span class="sb">`</span>zenity --file-selection --save --confirm-overwrite --filename<span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>basename <span class="s2">&quot;</span><span class="si">${</span><span class="nv">1</span><span class="si">}</span><span class="s2">&quot;</span><span class="k">)</span><span class="s2">&quot;</span><span class="sb">`</span>
+
+<span class="c1"># Here the source file comes from nautilus action i.e</span>
+<span class="c1"># the contextual gnome-desktop add-on nautilus-actions</span>
+<span class="nv">source_filepath</span><span class="o">=</span><span class="si">${</span><span class="nv">1</span><span class="si">}</span>
+
+<span class="k">if</span> <span class="o">[[</span> -n <span class="s2">&quot;</span><span class="si">${</span><span class="nv">destination</span><span class="si">}</span><span class="s2">&quot;</span> <span class="o">]]</span> <span class="p">;</span> <span class="k">then</span>
+
+  fast-copy -r <span class="s2">&quot;</span><span class="si">${</span><span class="nv">source_filepath</span><span class="si">}</span><span class="s2">&quot;</span> -w <span class="s2">&quot;</span><span class="si">${</span><span class="nv">destination</span><span class="si">}</span><span class="s2">&quot;</span> -o
+
+  zenity --info --text<span class="o">=</span><span class="s2">&quot;Copy completed&quot;</span> --no-wrap --no-markup
+
+<span class="k">fi</span>
+
+<span class="nb">exit</span> <span class="m">0</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="copyright">
+<h3>Copyright<a class="headerlink" href="#copyright" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-text"><div class="highlight"><pre><span></span>fast-copy - a fast single chunk file copy program.
+
+Copyright (C) 2017 Brüggemann Eddie.
+
+This file is part of fast-copy.
+fast-copy is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+fast-copy is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with gfast-copy. If not, see &lt;http://www.gnu.org/licenses/&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        <a class="uplink" href="index.html#document-index">Contents</a>
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Brüggemann Eddie.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.3.
+    </div>
+  </body>
+</html>

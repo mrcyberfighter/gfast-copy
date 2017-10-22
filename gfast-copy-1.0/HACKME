@@ -1,0 +1,68 @@
+======
+HACKME
+======
+
+.. warning::
+
+  Into the right term of the word, criminals are not welcome anyway.
+
+  + They should be told that a computer is a tool not a f@cking machine.
+
+  And that they should stop their shit before it's too late in jail !
+
+  + We work for a better world and not for being annoyed by criminals.
+
+---
+
+The source are copied into the $(pkgdatadir)/src folder
+
+and a Makefile is provided for hacking the code of gfast-copy.
+
+---
+
+If you fear that someone change your program
+
+the hash is computed at build time
+
+and copy into $(pkgdatadir) too.
+
+Simply remove the source if you get anxious about this.
+
+Thanks for feedback if you change and/or enhance this little tool(s).
+
+---
+
+:note: $(pkgdatadir) is equal to /usr(/local)/share/prgname.
+
+------
+MacOSX
+------
+
+You can help by explain me how to build a package for MacOSX
+
+for lambda user.
+
+or building and distributing one yourself according the GPLv3 license.
+
+Think to notify me by mail if you do this: <mrcyberfighter@gmail.com>.
+
+Every tip, knowledges, ideas, and so on... in this way is welcome.
+
+--------------------
+Separating the tools
+--------------------
+
+Take look at the configure.ac file to see that I have try to implement
+
+2 options:
+
+--disable-graphical-tool
+
+and
+
+--disable-cmdline-tool
+
+to give to the configure script.
+
+Without success, sorry.
+

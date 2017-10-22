@@ -1,0 +1,128 @@
+============
+TRANSLATIONS
+============
+
+If you want you can perform a translation into your native language
+
+or any other you really master the gettext macro are set.
+
+
+Because I write program only in English being a German immigrant to France and
+
+I think the future is in America so the English language with
+
+few changes like "color" and "colour".
+
+
+Thanks to mail me if you do so.
+
+And: thanks for contribution and feedback.
+
+======
+DONATE
+======
+
+No thank you, money makes dirty !
+
+====================
+Separating the tools
+====================
+
+Take look at the configure.ac file to see that I have try to implement
+
+2 options:
+
+--disable-graphical-tool
+
+and
+
+--disable-cmdline-tool
+
+to give to the configure script.
+
+Without success, sorry.
+
+======
+MacOSX
+======
+
+You can make a package for MacOSX because currently only the tar-ball,
+
+as good as it is, is provided for MacOSX.
+
+--------------------
+Either a *.pkg file.
+--------------------
+
+I though to generate it containing the *.dyn.lib files and library dependencies
+
+and the binaries.
+
+Then to copy the *.dyn.lib to their original location (coming from *brew*)
+
+with a shell script
+
+shipped with the *.pkg file. 
+
+------
+Either
+------
+
+The new MacOSX package from what I know nothing.
+
+By twice every tip, knowledges, ideas, and so on...
+
+are welcome.  
+
+In the way of building a package for the lambda user.
+
+==============
+Wrapper script
+==============
+
+You can build a wrapper script around the fast-copy command-line tool,
+
+per example using zenity or like,
+
+as like this one,
+
+using zenity and nautilus-action:
+
+.. code-bloc:: bash
+
+  #! /bin/bash
+
+  ###############################################################
+  # Wrapper for fast-copy using zenity and nautilus-actions for #
+  # speed up the file copying.                                  #
+  ###############################################################
+
+  function usage() {
+
+    echo "usage $(basename $0) -r input-file -w output-file [-o] [-s] [-e] [-h]" ;
+
+    exit 1 ;
+  }
+
+  if [[ $# -ne 1 ]] ; then
+
+    usage ;
+
+  fi
+
+  destination=`zenity --file-selection --save --confirm-overwrite --filename="$(basename "${1}")"`
+
+  # Here the source file comes from nautilus action i.e
+  # the contextual gnome-desktop add-on nautilus-actions
+  source_filepath=${1}
+
+  if [[ -n "${destination}" ]] ; then
+
+    fast-copy -r "${source_filepath}" -w "${destination}" -o
+ 
+    zenity --info --text="Copy completed" --no-wrap --no-markup
+ 
+  fi
+
+  exit 0
+ 

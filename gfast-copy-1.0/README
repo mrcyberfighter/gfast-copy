@@ -1,0 +1,90 @@
+==========
+gfast-copy
+==========
+
+gfast-copy copy comes from the idea to let a binary copy big files,
+
+faster than the O.S.
+
+I often copy videos files from left to right and from right to left.
+
+gfast-copy is build on the top of the command-line tool: fast-copy.
+
+.. note::
+
+  fast-copy is written in UNIX fashion:
+
+  A tool which do one single task but do it well.
+
+  According the POSIX (Portable Operating System Interface X for UNIX) standard.
+
+============
+Installation
+============
+
+  $ ./configure       # Perform a system check.
+  Then
+  $ make              # Build the program(s).
+  $ make strip        # Remove unneeded symbols.
+  Finally
+  $ sudo make install # Install the program(s).
+
+Enjoy fast copying chunks using (g)fast-copy.
+
+:warning: On MacOSX maybe you may must type ``$ chmod +x install.sh``
+          after ``$ make`` for installing.
+
+===========
+Portability
+===========
+
+-----
+Linux
+-----
+
+All works well with the tar-ball.
+
+A *.deb package is provided for DEBIAN family distributions.
+
+A *.rpm package is provided for RPM family distributions.
+
+-------
+Windows
+-------
+
+Thanks to the bugzilla-gnome team for their help.
+
+Without them I would not provide you a gfast-copy auto-extractable file.
+
+:note: But you can build it, using the tar-ball for yourself into the MSYS2 or Cygwin environment.
+
+So an auto-extractable *.exe file is available.
+
+------
+MacOSX
+------
+
+It works on MacOSX Using the tar-ball for installation.
+
+:note: An entry into the /Application is done by the building system.
+
+Read the TODO and/or the HACKME file.
+
+:note: You can download the file you want at <http://www.open-source-projects.net/gfast-copy/gfast-copy>.
+
+=======
+Credits
+=======
+
+:author: Brüggemann Eddie <mrcyberfighter@gmail.com>
+
+:version: 1.0
+
+:release: 20/10/2017.
+
+---
+
+Thanks to my beloved mother, my family and to the doctors.
+
+Stay away from drugs: drugs destroy your brain and your life.
+
